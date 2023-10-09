@@ -1,0 +1,39 @@
+.option-box {
+	width: 50rem;
+	height: 5rem;
+	padding-left: 2.8rem;
+	font-family: var(--fontMedium);
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+	background-color: var(--deepBlue);
+	color: var(--whiteColor);
+	cursor: pointer;
+	border-radius: 50rem;
+	border: 0.3rem solid transparent;
+	text-align: left;
+	transition: background-color, transform 200ms ease-in-out;
+
+	&:hover {
+		border: 0.3rem solid var(--deepBlue);
+		background-color: transparent;
+		transform: translateX(3rem);
+	}
+}
+
+.correct {
+	background-color: var(--blueColor);
+}
+
+.incorrect {
+	background-color: var(--redColor);
+}
+
+.unselected {
+	background-color: var(--yellowColor);
+	color: var(--deepDarkBlue);
+}
+
+.selected {
+	transform: translateX(3rem);
+}

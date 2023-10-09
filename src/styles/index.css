@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/* Colors */
+	--deepDarkBlue: #22262f;
+	--deepBlue: #293442;
+	--blueColor: #159ecb;
+	--yellowColor: #e8aa42;
+	--redColor: #d80032;
+	--whiteColor: #f8f6f4;
+
+	/* Fonts */
+	--fontLight: 'ubuntu-light';
+	--fontMedium: 'ubuntu-medium';
+	--fontBold: 'ubuntu-bold';
+}
+
+@font-face {
+	font-family: 'ubuntu-light';
+	src: url('./fonts/Ubuntu-Light.ttf');
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ubuntu-medium';
+	src: url('./fonts/Ubuntu-Medium.ttf');
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ubuntu-bold';
+	src: url('./fonts/Ubuntu-Bold.ttf');
+	font-display: swap;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: var(--deepDarkBlue);
+	padding: 2rem;
+	min-height: 100dvh;
+}
+
+svg {
+	all: unset;
+}

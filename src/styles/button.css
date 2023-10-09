@@ -1,0 +1,17 @@
+.btn {
+	min-width: 10rem;
+	height: 5rem;
+	padding: 0 2rem;
+	font-family: var(--fontMedium);
+	font-size: 1.6rem;
+	background-color: var(--deepBlue);
+	color: var(--whiteColor);
+	border: 0.3rem solid transparent;
+	border-radius: 50rem;
+	transition: background-color 200ms ease-in-out;
+
+	&:hover {
+		border: 0.3rem solid var(--deepBlue);
+		background-color: transparent;
+	}
+}

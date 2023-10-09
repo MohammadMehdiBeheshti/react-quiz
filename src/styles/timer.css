@@ -1,0 +1,14 @@
+.timer {
+	width: 10rem;
+	height: 5rem;
+	padding: 0 2rem;
+	font-family: var(--fontMedium);
+	font-size: 1.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--deepDarkBlue);
+	color: var(--whiteColor);
+	border: 0.3rem solid var(--deepBlue);
+	border-radius: 50rem;
+}
