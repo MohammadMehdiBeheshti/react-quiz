@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
+import {useQuizContext} from '../contexts/QuizContext';
 import '../styles/timer.css';
 
-function Timer({ minutes = 0, seconds = 59, dispatch }) {
+function Timer({minutes = 0, seconds = 59}) {
+	const {dispatch} = useQuizContext();
+
 	const [time, setTime] = useState('00:00');
 
 	useEffect(() => {
 		let [min, sec] = [minutes, seconds];
 		const timeOut = () => {
-			dispatch({ type: 'showResult' });
+			dispatch({type: 'showResult'});
 		};
 
 		const timer = setInterval(() => {

@@ -1,18 +1,25 @@
+import {useQuizContext} from '../contexts/QuizContext';
 import '../styles/progressbar.css';
 
-function ProgressBar({ totalQ, quizNum, totalP, point }) {
+function ProgressBar() {
+	const {questions, index, totalScore, score} = useQuizContext();
+
 	return (
 		<section className="w-50 mb-3">
-			<progress className="progress" max={totalQ} value={quizNum}></progress>
+			<progress
+				className="progress"
+				max={questions.length}
+				value={index}
+			></progress>
 			<div className="flex justify-between text-whiteColor mt-1">
 				<span className="font-fontLight">
 					Questions
 					<span className="font-fontMedium ml-0.6">
-						{quizNum}/{totalQ}
+						{index}/{questions.length}
 					</span>
 				</span>
 				<span className="font-fontMedium">
-					{point}/{totalP} points
+					{score}/{totalScore} points
 				</span>
 			</div>
 		</section>

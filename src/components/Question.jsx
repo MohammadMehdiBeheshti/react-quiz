@@ -1,9 +1,14 @@
+import {useQuizContext} from '../contexts/QuizContext';
 import OptionBox from './OptionBox';
 import Button from './Button';
 import Timer from './Timer';
 
-function Question({ quiz, dispatch, answer }) {
-	const { question, options, correctOption, points } = quiz ?? {
+function Question() {
+	const {questions, index, dispatch, answer} = useQuizContext();
+
+	const quiz = questions.at(index);
+
+	const {question, options, correctOption, points} = quiz ?? {
 		question: null,
 		options: [],
 		correctOption: null,
@@ -29,13 +34,13 @@ function Question({ quiz, dispatch, answer }) {
 									: ''
 							}`}
 							disabled={hasAnswered}
-							onClick={() => dispatch({ type: 'newAnswer', payload: i })}
+							onClick={() => dispatch({type: 'newAnswer', payload: i})}
 							key={i}
 						/>
 					))}
 			</ul>
 			<div className="flex justify-between items-center mt-3">
-				<Timer minutes={9} seconds={59} dispatch={dispatch} />
+				<Timer minutes={9} seconds={59} />
 				{hasAnswered && (
 					<Button
 						onClick={() =>
